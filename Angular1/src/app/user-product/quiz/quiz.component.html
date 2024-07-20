@@ -1,0 +1,39 @@
+<!--*ngFor="let i of generatedArray"
+
+{{quiz1 | json}}
+{{index}}
+{{generatedArray}}-->
+<div class="bg-img">
+<div class="row mt20" *ngIf="quiz1" [style.background-color]="color">
+  <h1 style="text-align: center;">{{quiz1[index].topic}} QUIZ</h1>
+  <div class="col-md-5" style="margin:50px 400px 50px ">
+    <div class="card">
+      <div class="row ">
+          <div class="col-l-2 px-3">
+            <div class="card-block px-1">
+              <h4 class="card-title">{{quiz1[index].question}}</h4>
+              <p class="card-text"><strong>Options</strong></p>
+              <form>
+                <input type="radio" id="option1" name="options" value="option1" class="card-text" (click)="optionSelected('option_1')">{{quiz1[index].option_1}}<br><br>
+                
+                <input type="radio" id="option2" name="options" value="option2" class="card-text" (click)="optionSelected('option_2')">{{quiz1[index].option_2}}<br><br>
+                
+                <input type="radio" id="option3" name="options" value="option3" class="card-text" (click)="optionSelected('option_3')">{{quiz1[index].option_3}}<br><br>
+                
+                <input type="radio" id="option4" name="options" value="option4" class="card-text" (click)="optionSelected('option_4')">{{quiz1[index].option_4}}<br><br>
+                
+              
+              <button type="submit" class="btn btn-info" (click)="answerSelected(quiz1[index].question)" [disabled]="buttonDisabled">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="submit" class="btn btn-info" (click)="nextQuestion()" [disabled]="nextDisabled">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="submit" class="btn btn-info" (click)="submitQuiz()"  [hidden]="submitQuizDisabled">Submit Quiz</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="submit" class="btn btn-info" (click)="BackToQuiz()"  [hidden]="submitQuizDisabled">Back To Quizzes</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+            </form>
+              </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+</div>

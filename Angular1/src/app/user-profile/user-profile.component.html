@@ -1,0 +1,21 @@
+<!--<p>user-profile works!</p>
+{{model| json}}-->
+<div  class="bg-img">
+  <h1 style="text-align: center;">USER PROFILE</h1>
+<table class="table table-striped">
+    
+       <tbody style="text-align: center;"> 
+        <tr><td>Name</td>=><td><input type="text" [(ngModel)]="posts.name" /></td></tr>
+        <tr><td>Phone</td>=><td><input type="text" [(ngModel)]="posts.phone" /></td></tr>
+        <tr><td>Email</td>=><td><input type="text" [(ngModel)]="posts.email" /></td></tr>
+        <tr><td>Username</td>=><td><input type="text" [(ngModel)]="posts.username" /></td></tr>
+        <tr><td>Password</td>=><td><input type="text" [(ngModel)]="posts.password" /></td></tr>
+        </tbody>
+       
+       
+         </table>
+         <button type="submit" style="margin: 0px auto 0px 800px;padding: 15px 30px 15px 30px;border-radius: 30px;"  class="btn btn-warning" (click)="update(posts.uid,posts.name,posts.phone,posts.email,posts.username,posts.password)">Update </button>&nbsp;&nbsp;&nbsp;
+       <button type="submit" style="margin: 0px auto 0px 800px;padding: 15px 30px 15px 30px;border-radius: 30px;" class="btn btn-danger" (click)="delete(posts.uid)">Delete</button>&nbsp;&nbsp;&nbsp;
+       <button type="submit"style="margin: 0px auto 0px 800px;padding: 15px 30px 15px 30px;border-radius: 30px;" class="btn btn-success" (click)="GotoHome()">Home</button>
+
+</div> 

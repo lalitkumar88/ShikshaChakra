@@ -1,0 +1,23 @@
+
+.bg-img {
+    background-image: url("signup_bg.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    max-width: 400px;
+    padding: 16px;
+    background: rgba(53, 52, 52, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h4{
+    color:rgb(120, 190, 251);
+}

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-collapse">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="collapsibleNavbar" class="collapse navbar-collapse">
+
+        <ul class="navbar-nav">
+            <li class="nav-item" ><a href="http://localhost:4200/user-product" class="nav-link"><b  style="color: azure;"> HOME | </b></a></li>
+            <li class="nav-item"><a href="http://localhost:4200/user-dashboard" class="nav-link"><b  style="color: azure;"> DASHBOARD | </b></a></li>
+            <li class="nav-item"><a href="http://localhost:4200/user-quizes" class="nav-link"><b  style="color: azure;"> QUIZES  </b></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="bg-img">
+  <section class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center mb-5">
+  
+            <h1 >USER COURSES</h1><p class="lead"></p>
+          </div>
+        </div>
+      <div class="row">
+     <div class="col-sm-12 col-md-6 col-md-4 mb-4"><div class="card text-dark card-has-bg click-col" *ngFor="let i of posts" (click)="explore_course(i.cid)"  style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+             <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
+            <div class="card-img-overlay d-flex flex-column">
+             <div class="card-body">
+                <small class="card-meta mb-2"> {{i.cname}}</small>
+                <h4 class="card-title mt-0 "><a class="text-dark"> </a>{{i.description}}</h4>
+               <small><i class="far fa-clock"></i>{{i.duration}}</small>
+              </div>
+              <div class="card-footer">
+               <div class="media">
+      <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png?format=auto&version=1688931977&width=80&height=80" alt="Generic placeholder image" style="max-width:50px">
+      <div class="media-body">
+        <h6 class="my-0 text-dark d-block"></h6>
+         <small></small>
+        </div>
+        </div></div>
+      </div></div></div>
+    </div>
+   </div>
+  </section>
+  </div>

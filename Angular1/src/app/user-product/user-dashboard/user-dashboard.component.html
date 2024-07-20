@@ -1,0 +1,47 @@
+
+<div class="container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h3></h3>
+      </div>
+      <ul class="list-unstyled components">
+        <li>
+            <a (click)="home()" class="nav-link"><b> HOME  </b></a><hr>
+        </li>
+        <li>
+            <a (click)="allcourses()" class="nav-link"><b> ALL COURSES </b></a><hr>
+        </li>
+        <li>
+            <a (click)="quizes()" class="nav-link"><b> QUIZZES  </b></a><hr>
+        </li>
+        <li>
+            <a (click)="about()" class="nav-link"><b> ABOUT  </b></a>
+        </li>
+      </ul>
+    </nav>
+</div>
+
+<div class="bg-img">
+<div class="content">
+    <section *ngFor="let i of op">
+      <div class="container py-2">
+        <div class="card">
+          <div class="row ">
+            <div class="col-sm-2"> 
+                <img src={{i.imglink}} class="w-100">
+              </div>
+              <div class="col-sm-2 px-3">
+                <div class="card-block px-1">
+                  <h4 class="card-title">{{i.cname}}</h4>
+                  <p class="card-text"><strong>{{i.description}}</strong></p>
+                  <p class="card-text">Duration: {{i.duration}}</p>
+                  <h3 class="card-text">{{i.price}}</h3>
+                  <button type="submit" class="btn btn-info" (click)="explore_course(i.cid)">Explore More</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+</div>
+</div>
