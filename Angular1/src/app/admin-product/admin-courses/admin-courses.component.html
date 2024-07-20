@@ -1,0 +1,44 @@
+<!--<p>{{ posts | json }}</p>-->
+<div class="bg-img">
+<h1>ADMIN COURSE PANEL</h1>
+<table class="table table-striped">
+    <thead><tr>
+        <th>Id</th>
+        <th>Course Name</th>
+        <th>Duration</th>
+        <th>Description</th>
+        <th>Link</th>
+        <th>Imglink</th>
+        <th>Price</th>
+        <th>Update Details</th>
+        <th>Delete</th>
+        
+        </tr></thead>
+        <tbody>
+            <tr *ngFor="let i of posts">
+                <td>{{i.cid}}</td>
+                <td><input type="text" [(ngModel)]="i.cname" /></td>
+                <td><input type="text" [(ngModel)]="i.duration" /></td>
+                <td><input type="text" [(ngModel)]="i.description" /></td>
+                <td><input type="text" [(ngModel)]="i.link" /></td>
+                <td><input type="text" [(ngModel)]="i.imglink" /></td>
+                <td><input type="text" [(ngModel)]="i.price" /></td>
+                <td><button type="submit"  class="btn btn-warning" (click)="update(i.cid,i.cname,i.duration,i.description,i.link,i.imglink,i.price)">Update </button></td>
+                <td><button type="submit" class="btn btn-danger" (click)="delete(i.cid)">Delete</button></td>
+            </tr>
+            
+            <tr>
+                <td><input type="number" /></td>
+                <td><input type="text" [(ngModel)]="model2.cname" /></td>
+                <td><input type="text" [(ngModel)]="model2.duration" /></td>
+                <td><input type="text" [(ngModel)]="model2.description" /></td>
+                <td><input type="text" [(ngModel)]="model2.link" /></td>
+                <td><input type="text" [(ngModel)]="model2.imglink" /></td>
+                <td><input type="text" [(ngModel)]="model2.price" /></td>
+                <td><button type="submit" class="btn btn-success" (click)="create()">Add</button></td>
+            </tr>
+            <button (click)="Back()">Back</button>
+        </tbody>
+            </table>
+</div>
+    

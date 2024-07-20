@@ -1,0 +1,48 @@
+<!--<p>{{ posts | json }}</p>-->
+
+<div class="bg-img">
+<h1 style="text-align: center;">ADMIN QUIZ PANEL</h1>
+<table class="table table-striped">
+    <thead><tr>
+        <th>Id</th>
+        <th>Topic</th>
+        <th>Question</th>
+        <th>Option-1</th>
+        <th>Option-2</th>
+        <th>Option-3</th>
+        <th>Option-4</th>
+        <th>Answer</th>
+        <th>Update Details</th>
+        <th>Delete</th>
+        
+        </tr></thead>
+        <tbody>
+            <tr *ngFor="let i of posts">
+                <td>{{i.qid}}</td>
+                <td><input type="text" [(ngModel)]="i.topic" /></td>
+                <td><input type="text" [(ngModel)]="i.question" /></td>
+                <td><input type="text" [(ngModel)]="i.option_1" /></td>
+                <td><input type="text" [(ngModel)]="i.option_2" /></td>
+                <td><input type="text" [(ngModel)]="i.option_3" /></td>
+                <td><input type="text" [(ngModel)]="i.option_4" /></td>
+                <td><input type="text" [(ngModel)]="i.answer" /></td>
+                <td><button type="submit"  class="btn btn-warning" (click)="update(i.qid,i.topic,i.question,i.option_1,i.option_2,i.option_3,i.option_4,i.answer)">Update </button></td>
+                <td><button type="submit" class="btn btn-danger" (click)="delete(i.qid)">Delete</button></td>
+            </tr>
+            
+            <tr>
+                <td><input type="number" /></td>
+                <td><input type="text" [(ngModel)]="model3.topic" /></td>
+                <td><input type="text" [(ngModel)]="model3.question" /></td>
+                <td><input type="text" [(ngModel)]="model3.option_1" /></td>
+                <td><input type="text" [(ngModel)]="model3.option_2" /></td>
+                <td><input type="text" [(ngModel)]="model3.option_3" /></td>
+                <td><input type="text" [(ngModel)]="model3.option_4" /></td>
+                <td><input type="text" [(ngModel)]="model3.answer" /></td>
+                <td><button type="submit" class="btn btn-success" (click)="createquiz()">Add</button></td>
+            </tr>
+        </tbody>
+        <button (click)="Back()" >BACK</button>
+            </table>
+    
+</div> 

@@ -1,0 +1,10 @@
+
+.bg-img {
+    background-image: url("admin_courses.avif");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

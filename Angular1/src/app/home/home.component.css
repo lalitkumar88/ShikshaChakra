@@ -1,0 +1,67 @@
+.form-control{
+    width:500px;
+    margin:15px 400px;
+
+}
+
+.bg-img {
+    background-image: url("home_bg.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    margin:20px auto auto auto;
+    position: relative;
+    max-width: 500px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1{
+   
+    text-align:center;
+    text-decoration:dotted;
+    text-decoration-line: underline;
+    color:rgb(246, 244, 244);
+    text-decoration: underline;
+    text-shadow: crimson;
+    text-decoration-color: chartreuse;
+    font-weight: 1000;
+   
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid green;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: darkgreen;
+}
+
+.adminbutton{
+    margin: 0px 0px auto auto;
+    background-color: rgb(222, 53, 234);
+
+}
+.adminbutton:hover {
+    background-color:rgb(104, 6, 120);
+}
